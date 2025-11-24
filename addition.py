@@ -1,7 +1,14 @@
-def add(a,b):
-    return a+b
+import sys
 
-if __name__ == "__main__":
-    x = 10
-    y = 20
-    print("Sum = ", add(x,y))
+def add(a, b):
+    return a + b
+
+if _name_ == "_main_":
+    if len(sys.argv) != 3:
+        print("Usage: python add.py <num1> <num2>")
+        sys.exit(1)
+
+    x = int(sys.argv[1])
+    y = int(sys.argv[2])
+
+    print("Sum:", add(x, y))
